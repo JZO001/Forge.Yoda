@@ -1,0 +1,14 @@
+﻿@page "/logout"
+@using Forge.Security.Jwt.Shared.Client.Services
+@inject IAuthenticationService userService
+@inject NavigationManager NavigationManager
+
+@code {
+
+    protected override async Task OnInitializedAsync()
+    {
+        await userService.LogoutUserAsync();
+        NavigationManager.NavigateTo("/");
+    }
+
+}

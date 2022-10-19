@@ -1,0 +1,56 @@
+﻿<Project Sdk="Microsoft.NET.Sdk.BlazorWebAssembly">
+
+	<PropertyGroup>
+		<TargetFramework>net6.0</TargetFramework>
+		<Nullable>enable</Nullable>
+		<ImplicitUsings>enable</ImplicitUsings>
+		<ServiceWorkerAssetsManifest>service-worker-assets.js</ServiceWorkerAssetsManifest>
+	</PropertyGroup>
+
+	<ItemGroup>
+		<PackageReference Include="Forge.Security.Jwt.Client" Version="1.2.1" />
+		<PackageReference Include="Forge.Security.Jwt.Client.Storage.Browser" Version="1.2.0" />
+		<PackageReference Include="Forge.Security.Jwt.Shared" Version="1.5.0" />
+		<PackageReference Include="Microsoft.AspNetCore.Components.WebAssembly" Version="6.0.10" />
+		<PackageReference Include="Microsoft.AspNetCore.Components.WebAssembly.DevServer" Version="6.0.10" PrivateAssets="all" />
+	</ItemGroup>
+
+	<ItemGroup>
+		<ProjectReference Include="..\Forge.Yoda.Shared.Models\Forge.Yoda.Shared.Models.csproj" />
+		<ProjectReference Include="..\Forge.Yoda.Shared.ServiceImpls\Forge.Yoda.Shared.ServiceImpls.csproj" />
+		<ProjectReference Include="..\Forge.Yoda.Shared.ServiceInterfaces\Forge.Yoda.Shared.ServiceInterfaces.csproj" />
+		<ProjectReference Include="..\Forge.Yoda.Shared.UI\Forge.Yoda.Shared.UI.csproj" />
+	</ItemGroup>
+
+	<!--ItemGroup>
+		<PackageReference Include="System.IdentityModel.Tokens.Jwt" Version="6.23.1" />
+		<PackageReference Include="Microsoft.AspNetCore.Components.Authorization" Version="6.0.10" />
+	</ItemGroup-->
+
+	<ItemGroup>
+		<!--Reference Include="Forge.Security.Jwt.Client">
+			<HintPath>..\Forge.Yoda.Externals\Forge.Security.Jwt.Client.dll</HintPath>
+		</Reference>
+		<Reference Include="Forge.Security.Jwt.Client.Storage.Browser">
+			<HintPath>..\Forge.Yoda.Externals\Forge.Security.Jwt.Client.Storage.Browser.dll</HintPath>
+		</Reference>
+		<Reference Include="Forge.Security.Jwt.Shared">
+			<HintPath>..\Forge.Yoda.Externals\Forge.Security.Jwt.Shared.dll</HintPath>
+		</Reference>
+		<Reference Include="Forge.Wasm.BrowserStorages">
+			<HintPath>..\Forge.Yoda.Externals\Forge.Wasm.BrowserStorages.dll</HintPath>
+		</Reference-->
+		<PackageReference Include="System.IdentityModel.Tokens.Jwt" Version="6.24.0" />
+		<PackageReference Include="Microsoft.AspNetCore.Components.Authorization" Version="6.0.10" />
+		<PackageReference Include="Microsoft.Extensions.Hosting.Abstractions" Version="6.0.0" />
+	</ItemGroup>
+
+	<ItemGroup>
+		<ServiceWorker Include="wwwroot\service-worker.js" PublishedContent="wwwroot\service-worker.published.js" />
+	</ItemGroup>
+
+	<Target Name="PreBuild" BeforeTargets="PreBuildEvent">
+		<Exec Command="call copy_wwwroot.bat Forge.Yoda.Apps.ASPNETCore.Client blazor.webassembly.js true true" />
+	</Target>
+
+</Project>

@@ -1,0 +1,13 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+	<PropertyGroup>
+		<TargetFramework>net6.0</TargetFramework>
+		<ImplicitUsings>enable</ImplicitUsings>
+	</PropertyGroup>
+
+	<ItemGroup>
+		<ProjectReference Include="..\Forge.Yoda.Shared.Models\Forge.Yoda.Shared.Models.csproj" />
+		<ProjectReference Include="..\Forge.Yoda.Shared.ServiceInterfaces\Forge.Yoda.Shared.ServiceInterfaces.csproj" />
+	</ItemGroup>
+
+</Project>

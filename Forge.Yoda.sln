@@ -1,0 +1,92 @@
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.0.31611.283
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Forge.Yoda.Shared.Models", "Forge.Yoda.Shared.Models\Forge.Yoda.Shared.Models.csproj", "{3862FC10-9689-404F-9FB8-08A42DAB4C2E}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Forge.Yoda.Shared.ServiceInterfaces", "Forge.Yoda.Shared.ServiceInterfaces\Forge.Yoda.Shared.ServiceInterfaces.csproj", "{CAB75CEF-9E75-42C2-83AE-1BF42E00C0C3}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Forge.Yoda.Shared.UI", "Forge.Yoda.Shared.UI\Forge.Yoda.Shared.UI.csproj", "{08CFC046-F9DA-4E08-A72D-719F147E4982}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Forge.Yoda.Shared.UI.Core", "Forge.Yoda.Shared.UI.Core\Forge.Yoda.Shared.UI.Core.csproj", "{60C49EFC-6DB0-48DF-BDE0-6E00575ACD0C}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Forge.Yoda.Apps.MAUI", "Forge.Yoda.Apps.MAUI\Forge.Yoda.Apps.MAUI.csproj", "{B9576548-52C8-4F52-A344-C75897484155}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Forge.Yoda.Apps.ASPNETCore.Server", "Forge.Yoda.Apps.ASPNETCore.Server\Forge.Yoda.Apps.ASPNETCore.Server.csproj", "{C18B2CE3-34DE-4747-B114-2759EE6341AE}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Forge.Yoda.Apps.ASPNETCore.Client", "Forge.Yoda.Apps.ASPNETCore.Client\Forge.Yoda.Apps.ASPNETCore.Client.csproj", "{04DB5781-952F-4D76-990C-355FA089CE0D}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Forge.Yoda.Apps.WinForms", "Forge.Yoda.Apps.WinForms\Forge.Yoda.Apps.WinForms.csproj", "{637BB7D6-C63C-41DA-B7E6-565E9C3AFD2E}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Forge.Yoda.Apps.WPF", "Forge.Yoda.Apps.WPF\Forge.Yoda.Apps.WPF.csproj", "{A44723E5-7E9E-4F42-B9E1-C9753CA886C9}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Forge.Yoda.Shared.ServiceImpls", "Forge.Yoda.Shared.ServiceImpls\Forge.Yoda.Shared.ServiceImpls.csproj", "{BA56069B-561E-4E24-BCD6-DB61AB67ED5B}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Forge.Yoda.Services.Authentication", "Forge.Yoda.Services.Authentication\Forge.Yoda.Services.Authentication.csproj", "{462F7B26-2A63-41C9-9878-8136D6052C7F}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Forge.Yoda.Externals", "Forge.Yoda.Externals\Forge.Yoda.Externals.csproj", "{EA78EA0A-D50C-456C-A7B5-ACA63D13F815}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{3862FC10-9689-404F-9FB8-08A42DAB4C2E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3862FC10-9689-404F-9FB8-08A42DAB4C2E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3862FC10-9689-404F-9FB8-08A42DAB4C2E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3862FC10-9689-404F-9FB8-08A42DAB4C2E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{CAB75CEF-9E75-42C2-83AE-1BF42E00C0C3}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{CAB75CEF-9E75-42C2-83AE-1BF42E00C0C3}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{CAB75CEF-9E75-42C2-83AE-1BF42E00C0C3}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{CAB75CEF-9E75-42C2-83AE-1BF42E00C0C3}.Release|Any CPU.Build.0 = Release|Any CPU
+		{08CFC046-F9DA-4E08-A72D-719F147E4982}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{08CFC046-F9DA-4E08-A72D-719F147E4982}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{08CFC046-F9DA-4E08-A72D-719F147E4982}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{08CFC046-F9DA-4E08-A72D-719F147E4982}.Release|Any CPU.Build.0 = Release|Any CPU
+		{60C49EFC-6DB0-48DF-BDE0-6E00575ACD0C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{60C49EFC-6DB0-48DF-BDE0-6E00575ACD0C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{60C49EFC-6DB0-48DF-BDE0-6E00575ACD0C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{60C49EFC-6DB0-48DF-BDE0-6E00575ACD0C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B9576548-52C8-4F52-A344-C75897484155}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B9576548-52C8-4F52-A344-C75897484155}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B9576548-52C8-4F52-A344-C75897484155}.Debug|Any CPU.Deploy.0 = Debug|Any CPU
+		{B9576548-52C8-4F52-A344-C75897484155}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B9576548-52C8-4F52-A344-C75897484155}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B9576548-52C8-4F52-A344-C75897484155}.Release|Any CPU.Deploy.0 = Release|Any CPU
+		{C18B2CE3-34DE-4747-B114-2759EE6341AE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C18B2CE3-34DE-4747-B114-2759EE6341AE}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C18B2CE3-34DE-4747-B114-2759EE6341AE}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C18B2CE3-34DE-4747-B114-2759EE6341AE}.Release|Any CPU.Build.0 = Release|Any CPU
+		{04DB5781-952F-4D76-990C-355FA089CE0D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{04DB5781-952F-4D76-990C-355FA089CE0D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{04DB5781-952F-4D76-990C-355FA089CE0D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{04DB5781-952F-4D76-990C-355FA089CE0D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{637BB7D6-C63C-41DA-B7E6-565E9C3AFD2E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{637BB7D6-C63C-41DA-B7E6-565E9C3AFD2E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{637BB7D6-C63C-41DA-B7E6-565E9C3AFD2E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{637BB7D6-C63C-41DA-B7E6-565E9C3AFD2E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A44723E5-7E9E-4F42-B9E1-C9753CA886C9}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A44723E5-7E9E-4F42-B9E1-C9753CA886C9}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A44723E5-7E9E-4F42-B9E1-C9753CA886C9}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A44723E5-7E9E-4F42-B9E1-C9753CA886C9}.Release|Any CPU.Build.0 = Release|Any CPU
+		{BA56069B-561E-4E24-BCD6-DB61AB67ED5B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{BA56069B-561E-4E24-BCD6-DB61AB67ED5B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{BA56069B-561E-4E24-BCD6-DB61AB67ED5B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{BA56069B-561E-4E24-BCD6-DB61AB67ED5B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{462F7B26-2A63-41C9-9878-8136D6052C7F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{462F7B26-2A63-41C9-9878-8136D6052C7F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{462F7B26-2A63-41C9-9878-8136D6052C7F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{462F7B26-2A63-41C9-9878-8136D6052C7F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{EA78EA0A-D50C-456C-A7B5-ACA63D13F815}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{EA78EA0A-D50C-456C-A7B5-ACA63D13F815}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{EA78EA0A-D50C-456C-A7B5-ACA63D13F815}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{EA78EA0A-D50C-456C-A7B5-ACA63D13F815}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {61F7FB11-1E47-470C-91E2-47F8143E1572}
+	EndGlobalSection
+EndGlobal

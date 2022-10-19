@@ -1,0 +1,32 @@
+﻿@using Forge.Security.Jwt.Shared.Client.Services
+
+@inject UserContext userContext
+@inject IAuthenticationService userService
+
+<AuthorizeView>
+    <Authorized>
+        <a href="#">
+            Welcome @userContext.CurrentUser.GivenName!
+        </a>
+        <a href="logout" class="ml-4"> Log out</a>
+    </Authorized>
+    <NotAuthorized>
+        <a href="Login">Log in</a>
+        <a href="register">Register</a>
+    </NotAuthorized>
+</AuthorizeView>
+
+@code {
+    protected override void OnInitialized()
+    {
+        userContext.PropertyChanged += CurrentUserInfoChanged;
+    }
+
+    private async void CurrentUserInfoChanged(object? sender, EventArgs e)
+    {
+        await InvokeAsync(() =>
+        {
+            StateHasChanged();
+        });
+    }
+}

@@ -1,0 +1,31 @@
+﻿<Project Sdk="Microsoft.NET.Sdk.Razor">
+
+	<PropertyGroup>
+		<TargetFramework>net6.0</TargetFramework>
+		<Nullable>enable</Nullable>
+		<ImplicitUsings>enable</ImplicitUsings>
+	</PropertyGroup>
+
+	<ItemGroup>
+		<SupportedPlatform Include="browser" />
+	</ItemGroup>
+
+	<ItemGroup>
+		<PackageReference Include="Forge.Security.Jwt.Shared" Version="1.5.0" />
+		<PackageReference Include="Microsoft.AspNetCore.Components.Authorization" Version="6.0.10" />
+		<PackageReference Include="Microsoft.AspNetCore.Components.Web" Version="6.0.10" />
+		<PackageReference Include="Microsoft.AspNetCore.WebUtilities" Version="2.2.0" />
+	</ItemGroup>
+
+	<ItemGroup>
+		<ProjectReference Include="..\Forge.Yoda.Shared.Models\Forge.Yoda.Shared.Models.csproj" />
+		<ProjectReference Include="..\Forge.Yoda.Shared.ServiceInterfaces\Forge.Yoda.Shared.ServiceInterfaces.csproj" />
+	</ItemGroup>
+
+	<!--ItemGroup>
+		<Reference Include="Forge.Security.Jwt.Shared">
+			<HintPath>..\Forge.Yoda.Externals\Forge.Security.Jwt.Shared.dll</HintPath>
+		</Reference>
+	</ItemGroup-->
+
+</Project>

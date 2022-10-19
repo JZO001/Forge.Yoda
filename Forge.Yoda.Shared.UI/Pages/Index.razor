@@ -1,0 +1,32 @@
+﻿@page "/"
+@inject UserContext userContext
+
+<PageTitle>Index</PageTitle>
+
+Welcome to your new app.
+
+<AuthorizeView>
+    <Authorized>
+        <h1>Hello, @userContext.CurrentUser.GivenName!</h1>
+
+        <SurveyPrompt Title="How is Blazor working for you?" />
+    </Authorized>
+    <NotAuthorized>
+        Please login for additional contents
+    </NotAuthorized>
+</AuthorizeView>
+
+@code {
+    protected override void OnInitialized()
+    {
+        userContext.PropertyChanged += CurrentUserInfoChanged;
+    }
+
+    private async void CurrentUserInfoChanged(object? sender, EventArgs e)
+    {
+        await InvokeAsync(() =>
+        {
+            StateHasChanged();
+        });
+    }
+}
