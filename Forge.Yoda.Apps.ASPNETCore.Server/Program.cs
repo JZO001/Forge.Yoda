@@ -9,6 +9,7 @@ namespace Forge.Yoda.Apps.ASPNETCore.Server
         {
             var builder = WebApplication.CreateBuilder(args);
 
+            /*
             builder.WebHost.ConfigureKestrel((context, serverOptions) =>
             {
                 serverOptions.Listen(IPAddress.Parse("192.168.0.100"), 7166, listenOptions =>
@@ -30,6 +31,7 @@ namespace Forge.Yoda.Apps.ASPNETCore.Server
                 serverOptions.Listen(IPAddress.Parse("192.168.0.100"), 5166);
                 serverOptions.ListenLocalhost(5166);
             });
+            */
 
             // Add services to the container.
 
