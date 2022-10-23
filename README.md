@@ -69,3 +69,23 @@ I have created examples for the implementations for the following client types:
 
 These projects are WASM / Blazor hybrid projects, so the UI is a web site (HTML, CSS, JS). Everything is hosted in a browser as a Web Assembly content. However in the desktop applications (WinForms, WPF, MAUI Windows) require
 a WebView to show and run the WASM.
+
+
+## Configuration of Forge.Yoda.Services.Authentication service
+Open the Database\DatabaseContext.cs and appsettings.json files. Modify the credentials as it is necessary on your side, create your own database.
+In the developer command prompt or in Package Manager Console (Tools -> NuGet Package Manager -> Package Manager Console) initialize your database.
+Select "Default project" in the window as "Forge.Yoda.Services.Authentication", than type in the command prompt:
+
+Update-Database
+
+If your configuration and database are properly pre-configured, the database schema will be created.
+
+
+## Startup
+It is recommended to configure the solution startup preferences. Right click on the solution and select "Set Startup Projects..." from the context menu. Choose the "Multiple startup projects",
+and always set the Action to "Start" for the project "Forge.Yoda.Services.Authentication". You can do the same for the "client" applications as you requested, one or more...
+
+Forge.Yoda.Services.Authentication service will create the administrative account for the first time. For the default set credentials, check the source code at Codes\InititalizationAtStartup.cs file.
+
+When start the solution, the one of the app windows will be a browser with a SwaggerUI for the Authentication service. This UI is applied for testing purpose and it is available in development mode.
+The other windows are depends on your project startup settings.

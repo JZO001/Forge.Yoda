@@ -42,8 +42,7 @@
 		<PackageReference Include="Microsoft.Extensions.Logging.Log4Net.AspNetCore" Version="6.1.0" />
 	</ItemGroup>
 
-	<ItemGroup>
-		<!--Reference Include="Forge.Security.Jwt.Service">
+	<ItemGroup><!--Reference Include="Forge.Security.Jwt.Service">
 			<HintPath>..\Forge.Yoda.Externals\Forge.Security.Jwt.Service.dll</HintPath>
 		</Reference>
 		<Reference Include="Forge.Security.Jwt.Shared">
@@ -51,6 +50,8 @@
 		</Reference>
 		<PackageReference Include="System.IdentityModel.Tokens.Jwt" Version="6.24.0" />
 		<PackageReference Include="Microsoft.AspNetCore.Components.Authorization" Version="6.0.10" /-->
+	
+	  <Folder Include="Migrations\" />
 	</ItemGroup>
 
 </Project>
