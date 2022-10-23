@@ -69,7 +69,6 @@ namespace Forge.Yoda.Services.Authentication.Controllers
         }
 
         [HttpPost("logout")]
-        [Authorize]
         public ActionResult Logout([FromBody] LogoutRequestViewModel request)
         {
             // optionally "revoke" JWT token on the server side --> add the current token to a block-list
@@ -100,7 +99,6 @@ namespace Forge.Yoda.Services.Authentication.Controllers
         }
 
         [HttpPost("validate-token")]
-        [Authorize]
         public async Task<ActionResult> ValidateToken([FromBody] TokenRequest request)
         {
             if (!ModelState.IsValid) return BadRequest();
@@ -144,7 +142,6 @@ namespace Forge.Yoda.Services.Authentication.Controllers
         }
 
         [HttpPost("refresh-token")]
-        [Authorize]
         public async Task<ActionResult> RefreshToken([FromBody] TokenRequest request)
         {
             if (!ModelState.IsValid) return BadRequest();
