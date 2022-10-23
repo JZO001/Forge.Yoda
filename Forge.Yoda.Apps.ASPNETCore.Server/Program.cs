@@ -7,7 +7,7 @@ namespace Forge.Yoda.Apps.ASPNETCore.Server
     {
         public static void Main(string[] args)
         {
-            var builder = WebApplication.CreateBuilder(args);
+            WebApplicationBuilder builder = WebApplication.CreateBuilder(args);
 
             /*
             builder.WebHost.ConfigureKestrel((context, serverOptions) =>
