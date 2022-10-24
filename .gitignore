@@ -153,6 +153,7 @@ $RECYCLE.BIN/
 .DS_Store
 
 # For Future
+.Output/*
 Forge.Yoda.Apps.ASPNETCore.Client/wwwroot/*
 Forge.Yoda.Apps.MAUI/wwwroot/*
 Forge.Yoda.Apps.WinForms/wwwroot/*

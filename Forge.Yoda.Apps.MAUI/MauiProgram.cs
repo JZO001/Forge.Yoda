@@ -73,7 +73,7 @@ namespace Forge.Yoda.Apps.MAUI
 #endif
                 options.RefreshTokenBeforeExpirationInMilliseconds = 50000;
                 options.SecondaryKeys.Add(new JwtKeyValuePair(Consts.DEVICE_ID, "7010c030-6a2c-4dc5-86a3-2a9702baa7b3"));
-                options.HttpMessageHandler = GetLocalhostHandler();
+                options.HttpMessageHandlerFactory = GetLocalhostHandler;
             });
 
             builder.Services.AddForgeJwtClientAuthenticationCoreWithLocalStorage();

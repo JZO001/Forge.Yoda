@@ -11,7 +11,7 @@ namespace Forge.Yoda.Services.Authentication.Database
         {
         }
 
-        public DatabaseContext(DbContextOptions options) : base(options)
+        public DatabaseContext(DbContextOptions<DatabaseContext> options) : base(options)
         {
         }
 
@@ -22,7 +22,7 @@ namespace Forge.Yoda.Services.Authentication.Database
             return new DatabaseContext(CreateOptions());
         }
 
-        private static DbContextOptions CreateOptions()
+        private static DbContextOptions<DatabaseContext> CreateOptions()
         {
             var optionsBuilder = new DbContextOptionsBuilder<DatabaseContext>();
             optionsBuilder.UseSqlServer(DefaultConnectionString);

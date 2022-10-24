@@ -11,7 +11,7 @@
 	</ItemGroup>
 
 	<ItemGroup>
-		<PackageReference Include="Forge.Security.Jwt.Shared" Version="1.5.0" />
+		<PackageReference Include="Forge.Security.Jwt.Shared" Version="1.6.0" />
 		<PackageReference Include="Microsoft.AspNetCore.Components.Authorization" Version="6.0.10" />
 		<PackageReference Include="Microsoft.AspNetCore.Components.Web" Version="6.0.10" />
 		<PackageReference Include="Microsoft.AspNetCore.WebUtilities" Version="2.2.0" />
@@ -22,10 +22,10 @@
 		<ProjectReference Include="..\Forge.Yoda.Shared.ServiceInterfaces\Forge.Yoda.Shared.ServiceInterfaces.csproj" />
 	</ItemGroup>
 
-	<!--ItemGroup>
-		<Reference Include="Forge.Security.Jwt.Shared">
+	<ItemGroup>
+		<!--Reference Include="Forge.Security.Jwt.Shared">
 			<HintPath>..\Forge.Yoda.Externals\Forge.Security.Jwt.Shared.dll</HintPath>
-		</Reference>
-	</ItemGroup-->
+		</Reference-->
+	</ItemGroup>
 
 </Project>

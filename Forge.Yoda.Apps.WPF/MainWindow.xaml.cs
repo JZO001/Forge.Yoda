@@ -24,7 +24,7 @@ namespace Forge.Yoda.Apps.WPF
         {
             InitializeComponent();
 
-            Func<HttpClientHandler> GetInsecureHandler = delegate ()
+            Func<HttpMessageHandler> GetInsecureHandler = delegate ()
             {
                 HttpClientHandler handler = new HttpClientHandler();
                 handler.ServerCertificateCustomValidationCallback = (message, cert, chain, errors) =>
@@ -56,7 +56,7 @@ namespace Forge.Yoda.Apps.WPF
                 options.BaseAddress = "https://localhost:7253/";
                 options.RefreshTokenBeforeExpirationInMilliseconds = 50000;
                 options.SecondaryKeys.Add(new JwtKeyValuePair(Consts.DEVICE_ID, "eb11812d-fb1b-4ec9-95d3-c9f9f9832a2a"));
-                options.HttpMessageHandler = GetInsecureHandler();
+                options.HttpMessageHandlerFactory = GetInsecureHandler;
             });
 
             services.AddForgeJwtClientAuthenticationCoreWithLocalStorage();

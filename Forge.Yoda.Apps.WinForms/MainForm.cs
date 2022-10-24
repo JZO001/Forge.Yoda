@@ -26,7 +26,7 @@ namespace Forge.Yoda.Apps.WinForms
         {
             ServiceCollection services = new ServiceCollection();
 
-            Func<HttpClientHandler> GetInsecureHandler = delegate ()
+            Func<HttpMessageHandler> GetInsecureHandler = delegate ()
             {
                 HttpClientHandler handler = new HttpClientHandler();
                 handler.ServerCertificateCustomValidationCallback = (message, cert, chain, errors) =>
@@ -54,7 +54,7 @@ namespace Forge.Yoda.Apps.WinForms
                 options.BaseAddress = "https://localhost:7253/";
                 options.RefreshTokenBeforeExpirationInMilliseconds = 50000;
                 options.SecondaryKeys.Add(new JwtKeyValuePair(Consts.DEVICE_ID, "7010c030-6a2c-4dc5-86a3-2a9702baa7b3"));
-                options.HttpMessageHandler = GetInsecureHandler();
+                options.HttpMessageHandlerFactory = GetInsecureHandler;
             });
 
             services.AddForgeJwtClientAuthenticationCoreWithLocalStorage();

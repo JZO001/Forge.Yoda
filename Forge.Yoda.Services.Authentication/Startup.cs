@@ -2,6 +2,7 @@
 using Forge.Yoda.Services.Authentication.Codes;
 using Forge.Yoda.Services.Authentication.Database;
 using Forge.Yoda.Services.Authentication.Services;
+using Forge.Security.Jwt.Service.Storage.SqlServer;
 using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.EntityFrameworkCore;
@@ -28,21 +29,21 @@ namespace Forge.Yoda.Services.Authentication
             JwtTokenConfiguration jwtTokenConfig = Configuration.GetSection("JwtTokenConfig").Get<JwtTokenConfiguration>();
             services.AddSingleton(jwtTokenConfig);
 
-            var connectionString = DatabaseContext.DefaultConnectionString = Configuration.GetConnectionString("DefaultConnection");
-
             // migrate database, if neccessary
-            var optionsBuilder = new DbContextOptionsBuilder<DatabaseContext>();
-            optionsBuilder.UseSqlServer(connectionString);
-            using (DatabaseContext context = new DatabaseContext(optionsBuilder.Options))
             {
-                context.Database.Migrate();
+                string connectionString = DatabaseContext.DefaultConnectionString = Configuration.GetConnectionString("DefaultConnection");
+                var dbContextOptionsBuilder = new DbContextOptionsBuilder<DatabaseContext>();
+                dbContextOptionsBuilder.UseSqlServer(connectionString);
+                using (DatabaseContext context = new DatabaseContext(dbContextOptionsBuilder.Options))
+                {
+                    context.Database.Migrate();
+                }
+                services.AddDbContext<DatabaseContext>(config =>
+                {
+                    config.UseSqlServer(connectionString);
+                    //config.UseInMemoryDatabase("Memory");
+                });
             }
-
-            services.AddDbContext<DatabaseContext>(config =>
-            {
-                config.UseSqlServer(connectionString);
-                //config.UseInMemoryDatabase("Memory");
-            });
 
             // AddIdentity registers the services
             services.AddIdentity<User, IdentityRole>(config =>
@@ -82,10 +83,12 @@ namespace Forge.Yoda.Services.Authentication
                 };
             });
 
+            // add Jwt Token service
             services.AddForgeJwtServerAuthenticationCore();
-            //services.AddSingleton<IStorage<JwtRefreshToken>, MemoryStorage<JwtRefreshToken>>(); // replace this later in a distributed environment
-            //services.AddSingleton<IJwtManagementService, JwtManagementService>();
-            //services.AddHostedService<JwtTokenMaintenanceHostedService>();
+            // add SqlServer storage
+            services.AddForgeJwtServiceSqlServerStorage(config => {
+                config.ConnectionString = Configuration.GetConnectionString("ServiceStorageConnection");
+            });
 
             services.AddScoped<IUserService, UserService>();
             services.AddCors(options =>
