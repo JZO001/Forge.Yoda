@@ -1,0 +1,11 @@
+.loginPopupCenter {
+    /* set the the position to relative */
+    position: relative;
+    width: 15rem;
+    height: 100%;
+    margin: auto;
+}
+
+.loginAfterMargin {
+    margin-bottom: 1rem;
+}
