@@ -1,8 +1,5 @@
+import { Claim, ClaimTypes, IAuthenticationService, ParsedTokenData, UserDataEventArgs } from "forge-security-jwt-client-web";
 import { EventArgs, GenericEvent } from "jzo-library";
-import { ClaimTypes } from "../../security/data/ClaimTypes";
-import { Claim, ParsedTokenData } from "../../security/data/types";
-import { UserDataEventArgs } from "../../security/data/UserDataEventArgs";
-import { IAuthenticationService } from "../../security/interfaces/IAuthenticationService";
 
 export class UserContext {
 

@@ -14,8 +14,7 @@ import LoadingPopup from "./LoadingPopup";
 import { ClickEventArgs, ValueChangedEventArgs } from "./DxTypes";
 import dxTextBox from "devextreme/ui/text_box";
 import dxButton from "devextreme/ui/button";
-import { ServiceStore } from "../../security/services/ServiceStore";
-import { JwtTokenResult } from "../../security/data/types";
+import { JwtTokenResult, ServiceStore } from "forge-security-jwt-client-web";
 
 type LoginState = {
     loginName: string,

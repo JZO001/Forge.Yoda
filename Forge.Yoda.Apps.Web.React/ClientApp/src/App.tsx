@@ -1,7 +1,7 @@
 import 'devextreme/dist/css/dx.common.css';
 import 'devextreme/dist/css/dx.light.css';
 import { Configuration, Options, ServiceStore } from 'forge-security-jwt-client-web';
-import AuthorizeView from 'forge-security-jwt-client-web/build/tsx/AuthorizeView';
+import { AuthorizeView } from 'forge-security-jwt-client-web-react';
 import { Guid } from 'jzo-library';
 
 import * as React from 'react';

@@ -6,11 +6,10 @@ import { Link } from 'react-router-dom';
 import { Navigate } from 'react-router';
 
 import LoadingPopup from "./LoadingPopup";
-import { ServiceStore } from "../../security/services/ServiceStore";
 import { UserContext } from "./UserContext";
-import Authorized from "../Authorized";
-import NotAuthorized from "../NotAuthorized";
 import { EventArgs } from "jzo-library";
+import { ServiceStore } from "forge-security-jwt-client-web";
+import { Authorized, NotAuthorized } from "forge-security-jwt-client-web-react";
 
 type AccountMenuState = {
     isErrorPopupVisible: boolean,
