@@ -9,6 +9,7 @@ using Microsoft.EntityFrameworkCore;
 using Microsoft.IdentityModel.Tokens;
 using Swashbuckle.AspNetCore.Filters;
 using System.Text;
+using Forge.Yoda.Services.Authentication.Codes;
 
 namespace Forge.Yoda.Services.Authentication
 {
@@ -62,6 +63,7 @@ namespace Forge.Yoda.Services.Authentication
                 .AddEntityFrameworkStores<DatabaseContext>()
                 .AddDefaultTokenProviders();
 
+            // add JWT bearer token authentication
             services.AddAuthentication(x =>
             {
                 x.DefaultAuthenticateScheme = JwtBearerDefaults.AuthenticationScheme;
@@ -102,7 +104,8 @@ namespace Forge.Yoda.Services.Authentication
                 });
             });
 
-            services.AddControllers().AddNewtonsoftJson();//.AddXmlSerializerFormatters();
+            services.AddControllers().AddNewtonsoftJson();
+
             // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
             services.AddEndpointsApiExplorer();
             services.AddSwaggerGen(options =>

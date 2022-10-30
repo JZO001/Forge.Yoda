@@ -65,8 +65,8 @@ namespace Forge.Yoda.Services.Authentication.Services
                     new Claim(ClaimTypes.Name, username),
                     new Claim(ClaimTypes.Role, user.Role),
                     new Claim(ClaimTypes.NameIdentifier, user.Id),
-                    new Claim(ClaimTypes.Surname, user.Surname),
-                    new Claim(ClaimTypes.GivenName, user.Givenname),
+                    new Claim(ClaimTypes.Surname, user.Surname!),
+                    new Claim(ClaimTypes.GivenName, user.Givenname!),
                     new Claim(ClaimTypes.Email, user.Email),
                 };
 

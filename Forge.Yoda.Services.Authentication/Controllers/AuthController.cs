@@ -98,6 +98,7 @@ namespace Forge.Yoda.Services.Authentication.Controllers
             return Ok(new BooleanResponse() { Result = result });
         }
 
+        [AllowAnonymous]
         [HttpPost("validate-token")]
         public async Task<ActionResult> ValidateToken([FromBody] TokenRequest request)
         {

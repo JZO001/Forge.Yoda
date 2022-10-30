@@ -9,6 +9,7 @@ using Forge.Yoda.Shared.UI.Models;
 using Microsoft.AspNetCore.Components.Web;
 using Microsoft.AspNetCore.Components.WebAssembly.Hosting;
 using Forge.Yoda.Shared.UI;
+using Forge.Wasm.BrowserStorages.Services.Abstraction;
 
 namespace Forge.Yoda.Apps.ASPNETCore.Client
 {
@@ -46,8 +47,11 @@ namespace Forge.Yoda.Apps.ASPNETCore.Client
             builder.Services.AddScoped<UserContext>();
 
             // business services goes here...
-            builder.Services.AddScoped(sp => new HttpClient { BaseAddress = new Uri(builder.HostEnvironment.BaseAddress) });
-            builder.Services.AddScoped(typeof(IWeatherForecastService), typeof(WeatherForecastService));
+            //builder.Services.AddScoped(sp => new HttpClient { BaseAddress = new Uri($"{builder.HostEnvironment.BaseAddress}:7067") });
+            //builder.Services.AddScoped(typeof(IWeatherForecastService), typeof(WeatherForecastService));
+            builder.Services.AddWeatherForecastService(config => {
+                config.BaseAddress = "https://localhost:7067/";
+            });
 
             await builder.Build().RunAsync();
         }

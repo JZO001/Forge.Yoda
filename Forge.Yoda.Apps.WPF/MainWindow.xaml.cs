@@ -64,8 +64,12 @@ namespace Forge.Yoda.Apps.WPF
             services.AddScoped<UserContext>();
 
             // business services goes here...
-            services.AddTransient(sp => new HttpClient(GetInsecureHandler()) { BaseAddress = new Uri("https://localhost:7166/") });
-            services.AddScoped(typeof(IWeatherForecastService), typeof(WeatherForecastService));
+            //services.AddTransient(sp => new HttpClient(GetInsecureHandler()) { BaseAddress = new Uri("https://localhost:7067/") });
+            //services.AddScoped(typeof(IWeatherForecastService), typeof(WeatherForecastService));
+            services.AddWeatherForecastService(config => {
+                config.BaseAddress = "https://localhost:7067/";
+            });
+
 
             ServiceProvider serviceProvider = services.BuildServiceProvider();
 

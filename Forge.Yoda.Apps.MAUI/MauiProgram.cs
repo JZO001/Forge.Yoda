@@ -49,7 +49,7 @@ namespace Forge.Yoda.Apps.MAUI
 
 #if DEBUG
             builder.Services.AddBlazorWebViewDeveloperTools();
-            string baseAddress = DeviceInfo.Platform == DevicePlatform.Android ? "https://10.0.2.2:7166" : "https://localhost:7166";
+            string baseAddress = DeviceInfo.Platform == DevicePlatform.Android ? "https://10.0.2.2:7067" : "https://localhost:7067";
             builder.Services.AddScoped(sp => new HttpClient(GetLocalhostHandler()) { BaseAddress = new Uri(baseAddress) });
 #else
             // TODO: change it to the final address
@@ -80,7 +80,10 @@ namespace Forge.Yoda.Apps.MAUI
 
             builder.Services.AddScoped<UserContext>();
 
-            builder.Services.AddScoped(typeof(IWeatherForecastService), typeof(WeatherForecastService));
+            //builder.Services.AddScoped(typeof(IWeatherForecastService), typeof(WeatherForecastService));
+            builder.Services.AddWeatherForecastService(config => {
+                config.BaseAddress = "https://localhost:7067/";
+            });
 
             return builder.Build();
         }
