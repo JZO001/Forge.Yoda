@@ -60,7 +60,7 @@
 	</ItemGroup>
 
 	<ItemGroup>
-		<PackageReference Include="System.IdentityModel.Tokens.Jwt" Version="6.24.0" />
+		<PackageReference Include="System.IdentityModel.Tokens.Jwt" Version="6.25.0" />
 		<PackageReference Include="Microsoft.AspNetCore.Components.Authorization" Version="6.0.10" />
 	</ItemGroup>
 

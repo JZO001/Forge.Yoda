@@ -37,9 +37,9 @@ namespace Forge.Yoda.Services.Authentication.Database
         /// <returns>
         /// true if the current object is equal to the <paramref name="other" /> parameter; otherwise, false.
         /// </returns>
-        public bool Equals(EntityBase other)
+        public bool Equals(EntityBase? other)
         {
-            return Equals((object)other);
+            return Equals((object?)other);
         }
 
         /// <summary>
@@ -49,7 +49,7 @@ namespace Forge.Yoda.Services.Authentication.Database
         /// <returns>
         ///   <c>true</c> if the specified <see cref="object" /> is equal to this instance; otherwise, <c>false</c>.
         /// </returns>
-        public override bool Equals(object obj)
+        public override bool Equals(object? obj)
         {
             if (obj == null) return false;
             if (ReferenceEquals(this, obj)) return true;

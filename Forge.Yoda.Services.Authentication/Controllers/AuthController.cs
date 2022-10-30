@@ -56,7 +56,7 @@ namespace Forge.Yoda.Services.Authentication.Controllers
                 });
             }
 
-            LoginResult result = await _userService.Login(request.Username, request.Password, keys);
+            LoginResult result = await _userService.Login(request.Username!, request.Password!, keys);
             if (!result.Succeeded)
             {
                 _logger.LogInformation($"User [{request.Username}] failed to log in the system. IsLockedOut: {result.IsLockedOut}, IsNotAllowed: {result.IsNotAllowed}, RequiresTwoFactor: {result.RequiresTwoFactor}, IP: [{ip}], User-Agent: [{userAgent}]");

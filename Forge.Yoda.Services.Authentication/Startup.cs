@@ -9,7 +9,6 @@ using Microsoft.EntityFrameworkCore;
 using Microsoft.IdentityModel.Tokens;
 using Swashbuckle.AspNetCore.Filters;
 using System.Text;
-using Forge.Yoda.Services.Authentication.Codes;
 
 namespace Forge.Yoda.Services.Authentication
 {
@@ -160,7 +159,7 @@ namespace Forge.Yoda.Services.Authentication
             var serviceScopeFactory = app.ApplicationServices.GetRequiredService<IServiceScopeFactory>();
             var serviceProvider = serviceScopeFactory.CreateScope().ServiceProvider;
 
-            InititalizationAtStartup initStartup = serviceProvider.GetService<InititalizationAtStartup>();
+            InititalizationAtStartup initStartup = serviceProvider.GetService<InititalizationAtStartup>()!;
             Task.WaitAll(initStartup.Initialize(env.IsDevelopment()));
 
         }

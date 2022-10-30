@@ -71,7 +71,7 @@ namespace Forge.Yoda.Services.WeatherForecastApi
 
             var app = builder.Build();
 
-            ILoggerFactory loggerFactory = (ILoggerFactory)app.Services.GetService(typeof(ILoggerFactory));
+            ILoggerFactory loggerFactory = (ILoggerFactory)app.Services.GetService(typeof(ILoggerFactory))!;
             loggerFactory.AddLog4Net();
 
             // Configure the HTTP request pipeline.
