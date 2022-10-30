@@ -83,9 +83,9 @@ If your configuration and database are properly pre-configured, the database sch
 
 ## Startup
 It is recommended to configure the solution startup preferences. Right click on the solution and select "Set Startup Projects..." from the context menu. Choose the "Multiple startup projects",
-and always set the Action to "Start" for the project "Forge.Yoda.Services.Authentication". You can do the same for the "client" applications as you requested, one or more...
+and always set the Action to "Start" for the project "Forge.Yoda.Services.Authentication" and "Forge.Yoda.Services.WeatherForecastApi". You can do the same for the "client" applications as you requested, one or more...
 
 Forge.Yoda.Services.Authentication service will create the administrative account for the first time. For the default set credentials, check the source code at Codes\InititalizationAtStartup.cs file.
 
-When start the solution, the one of the app windows will be a browser with a SwaggerUI for the Authentication service. This UI is applied for testing purpose and it is available in development mode.
-The other windows are depends on your project startup settings.
+When start the solution, the one of the app windows will be a browser with a SwaggerUI for the Authentication service and an other one for WeatherForecast service. 
+This UI is applied for testing purpose and it is available in development mode. The other windows are depends on your project startup settings.
