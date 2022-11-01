@@ -49,11 +49,6 @@ namespace Forge.Yoda.Apps.MAUI
 
 #if DEBUG
             builder.Services.AddBlazorWebViewDeveloperTools();
-            string baseAddress = DeviceInfo.Platform == DevicePlatform.Android ? "https://10.0.2.2:7067" : "https://localhost:7067";
-            builder.Services.AddScoped(sp => new HttpClient(GetLocalhostHandler()) { BaseAddress = new Uri(baseAddress) });
-#else
-            // TODO: change it to the final address
-            builder.Services.AddScoped(sp => new HttpClient { BaseAddress = new Uri("https://liveaddress.yourdomain.com") });
 #endif
 
             builder.Services.AddOptions();
@@ -67,8 +62,10 @@ namespace Forge.Yoda.Apps.MAUI
             builder.Services.AddForgeJwtClientAuthenticationCore((options) =>
             {
 #if DEBUG
+                // For development
                 options.BaseAddress = DeviceInfo.Platform == DevicePlatform.Android ? "https://10.0.2.2:7253" : "https://localhost:7253";
 #else
+                // TODO: change it to the live address
                 options.BaseAddress = "https://auth.yourdomain.com";
 #endif
                 options.RefreshTokenBeforeExpirationInMilliseconds = 50000;
@@ -80,9 +77,14 @@ namespace Forge.Yoda.Apps.MAUI
 
             builder.Services.AddScoped<UserContext>();
 
-            //builder.Services.AddScoped(typeof(IWeatherForecastService), typeof(WeatherForecastService));
             builder.Services.AddWeatherForecastService(config => {
-                config.BaseAddress = "https://localhost:7067/";
+#if DEBUG
+                // For development
+                config.BaseAddress = DeviceInfo.Platform == DevicePlatform.Android ? "https://10.0.2.2:7067" : "https://localhost:7067";
+#else
+                // TODO: change it to the live address
+                config.BaseAddress = "https://weatherservice.yourdomain.com";
+#endif
             });
 
             return builder.Build();

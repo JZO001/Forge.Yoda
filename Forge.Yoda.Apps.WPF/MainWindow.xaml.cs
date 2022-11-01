@@ -53,7 +53,13 @@ namespace Forge.Yoda.Apps.WPF
 
             services.AddForgeJwtClientAuthenticationCore((options) =>
             {
+#if DEBUG
+                // For development
                 options.BaseAddress = "https://localhost:7253/";
+#else
+                // TODO: change it to the live address
+                options.BaseAddress = "https://auth.yourdomain.com";
+#endif
                 options.RefreshTokenBeforeExpirationInMilliseconds = 50000;
                 options.SecondaryKeys.Add(new JwtKeyValuePair(Consts.DEVICE_ID, "eb11812d-fb1b-4ec9-95d3-c9f9f9832a2a"));
                 options.HttpMessageHandlerFactory = GetInsecureHandler;
@@ -67,7 +73,13 @@ namespace Forge.Yoda.Apps.WPF
             //services.AddTransient(sp => new HttpClient(GetInsecureHandler()) { BaseAddress = new Uri("https://localhost:7067/") });
             //services.AddScoped(typeof(IWeatherForecastService), typeof(WeatherForecastService));
             services.AddWeatherForecastService(config => {
+#if DEBUG
+                // For development
                 config.BaseAddress = "https://localhost:7067/";
+#else
+                // TODO: change it to the live address
+                config.BaseAddress = "https://weatherservice.yourdomain.com";
+#endif
             });
 
 
