@@ -39,6 +39,7 @@ namespace Forge.Yoda.Services.Authentication.Database
         /// </returns>
         public bool Equals(EntityBase? other)
         {
+            if (other == null) return false;
             return Equals((object?)other);
         }
 

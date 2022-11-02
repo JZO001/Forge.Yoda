@@ -28,7 +28,7 @@ namespace Forge.Yoda.Services.Authentication.Codes
                 IsUserAccountDisabled(db, USER_ADMIN_NAME, out isAdminExist, out isAdminAccountDisabled);
             }
 
-            User adminUser = null;
+            User? adminUser = null;
             if (!isAdminExist)
             {
                 adminUser = new User();
@@ -48,7 +48,7 @@ namespace Forge.Yoda.Services.Authentication.Codes
             isExist = false;
             isAccountDisabled = false;
 
-            User user = db.Users.SingleOrDefault(u => u.UserName == userName);
+            User? user = db.Users.SingleOrDefault(u => u.UserName == userName);
             if (user != null)
             {
                 isExist = true;

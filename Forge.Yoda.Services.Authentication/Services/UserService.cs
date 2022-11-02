@@ -1,16 +1,10 @@
-﻿using Forge.Security.Jwt.Service;
-using Forge.Security.Jwt.Shared.Service;
+﻿using Forge.Security.Jwt.Shared.Service;
 using Forge.Security.Jwt.Shared.Service.Models;
 using Forge.Yoda.Services.Authentication.Codes;
 using Forge.Yoda.Services.Authentication.Database;
 using Forge.Yoda.Services.Authentication.Models;
 using Microsoft.AspNetCore.Identity;
-using Microsoft.Extensions.Configuration;
-using Newtonsoft.Json;
-using System.Data;
-using System.Net;
 using System.Security.Claims;
-using System.Text;
 
 namespace Forge.Yoda.Services.Authentication.Services
 {
