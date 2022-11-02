@@ -63,7 +63,7 @@ namespace Forge.Yoda.Apps.MAUI
             {
 #if DEBUG
                 // For development
-                options.BaseAddress = DeviceInfo.Platform == DevicePlatform.Android ? "https://10.0.2.2:7253" : "https://localhost:7253";
+                options.BaseAddress = DeviceInfo.Platform == DevicePlatform.Android ? "https://10.0.2.2:7253/" : "https://localhost:7253/";
 #else
                 // TODO: change it to the live address
                 options.BaseAddress = "https://auth.yourdomain.com";
@@ -80,7 +80,7 @@ namespace Forge.Yoda.Apps.MAUI
             builder.Services.AddWeatherForecastService(config => {
 #if DEBUG
                 // For development
-                config.BaseAddress = DeviceInfo.Platform == DevicePlatform.Android ? "https://10.0.2.2:7067" : "https://localhost:7067";
+                config.BaseAddress = DeviceInfo.Platform == DevicePlatform.Android ? "https://10.0.2.2:7067/" : "https://localhost:7067/";
 #else
                 // TODO: change it to the live address
                 config.BaseAddress = "https://weatherservice.yourdomain.com";

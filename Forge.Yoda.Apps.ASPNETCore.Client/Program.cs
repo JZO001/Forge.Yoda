@@ -39,7 +39,7 @@ namespace Forge.Yoda.Apps.ASPNETCore.Client
                 options.BaseAddress = "https://localhost:7253/";
 #else
                 // TODO: change it to the live address
-                options.BaseAddress = "https://auth.yourdomain.com";
+                options.BaseAddress = "https://auth.yourdomain.com/";
 #endif
                 options.RefreshTokenBeforeExpirationInMilliseconds = 50000;
                 options.SecondaryKeys.Add(new JwtKeyValuePair(Consts.DEVICE_ID, "2c801461-b22d-4d03-9368-4cf3154394d1"));
@@ -53,15 +53,13 @@ namespace Forge.Yoda.Apps.ASPNETCore.Client
             builder.Services.AddScoped<UserContext>();
 
             // business services goes here...
-            //builder.Services.AddScoped(sp => new HttpClient { BaseAddress = new Uri($"{builder.HostEnvironment.BaseAddress}:7067") });
-            //builder.Services.AddScoped(typeof(IWeatherForecastService), typeof(WeatherForecastService));
             builder.Services.AddWeatherForecastService(config => {
 #if DEBUG
                 // For development
                 config.BaseAddress = "https://localhost:7067/";
 #else
                 // TODO: change it to the live address
-                config.BaseAddress = "https://weatherservice.yourdomain.com";
+                config.BaseAddress = "https://weatherservice.yourdomain.com/";
 #endif
             });
 

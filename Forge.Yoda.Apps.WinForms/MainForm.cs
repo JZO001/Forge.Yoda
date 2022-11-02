@@ -56,7 +56,7 @@ namespace Forge.Yoda.Apps.WinForms
                 options.BaseAddress = "https://localhost:7253/";
 #else
                 // TODO: change it to the live address
-                options.BaseAddress = "https://auth.yourdomain.com";
+                options.BaseAddress = "https://auth.yourdomain.com/";
 #endif
                 options.RefreshTokenBeforeExpirationInMilliseconds = 50000;
                 options.SecondaryKeys.Add(new JwtKeyValuePair(Consts.DEVICE_ID, "7010c030-6a2c-4dc5-86a3-2a9702baa7b3"));
@@ -68,21 +68,19 @@ namespace Forge.Yoda.Apps.WinForms
             services.AddScoped<UserContext>();
 
             // business services goes here...
-            //services.AddTransient(sp => new HttpClient(GetInsecureHandler()) { BaseAddress = new Uri("https://localhost:7067/") });
-            //services.AddScoped(typeof(IWeatherForecastService), typeof(WeatherForecastService));
             services.AddWeatherForecastService(config => {
 #if DEBUG
                 // For development
                 config.BaseAddress = "https://localhost:7067/";
 #else
                 // TODO: change it to the live address
-                config.BaseAddress = "https://weatherservice.yourdomain.com";
+                config.BaseAddress = "https://weatherservice.yourdomain.com/";
 #endif
             });
 
             ServiceProvider serviceProvider = services.BuildServiceProvider();
 
-            ILoggerFactory loggerFactory = serviceProvider.GetService<ILoggerFactory>();
+            ILoggerFactory loggerFactory = serviceProvider.GetService<ILoggerFactory>()!;
             loggerFactory.AddLog4Net();
 
             blazorWebView.HostPage = "wwwroot\\index.html";
