@@ -22,10 +22,4 @@
 		<ProjectReference Include="..\Forge.Yoda.Shared.ServiceInterfaces\Forge.Yoda.Shared.ServiceInterfaces.csproj" />
 	</ItemGroup>
 
-	<ItemGroup>
-		<!--Reference Include="Forge.Security.Jwt.Shared">
-			<HintPath>..\Forge.Yoda.Externals\Forge.Security.Jwt.Shared.dll</HintPath>
-		</Reference-->
-	</ItemGroup>
-
 </Project>
