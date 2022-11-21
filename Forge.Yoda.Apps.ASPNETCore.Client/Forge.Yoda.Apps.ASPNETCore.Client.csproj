@@ -8,9 +8,9 @@
 	</PropertyGroup>
 
 	<ItemGroup>
-		<PackageReference Include="Forge.Security.Jwt.Client" Version="1.2.3" />
-		<PackageReference Include="Forge.Security.Jwt.Client.Storage.Browser" Version="1.2.3" />
-		<PackageReference Include="Forge.Security.Jwt.Shared" Version="1.6.0" />
+		<PackageReference Include="Forge.Security.Jwt.Client" Version="1.2.4" />
+		<PackageReference Include="Forge.Security.Jwt.Client.Storage.Browser" Version="1.2.4" />
+		<PackageReference Include="Forge.Security.Jwt.Shared" Version="1.6.1" />
 		<PackageReference Include="Microsoft.AspNetCore.Components.WebAssembly" Version="6.0.10" />
 		<PackageReference Include="Microsoft.AspNetCore.Components.WebAssembly.DevServer" Version="6.0.10" PrivateAssets="all" />
 	</ItemGroup>
