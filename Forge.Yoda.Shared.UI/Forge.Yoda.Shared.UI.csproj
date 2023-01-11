@@ -11,9 +11,9 @@
 	</ItemGroup>
 
 	<ItemGroup>
-		<PackageReference Include="Forge.Security.Jwt.Shared" Version="1.6.1" />
-		<PackageReference Include="Microsoft.AspNetCore.Components.Authorization" Version="6.0.10" />
-		<PackageReference Include="Microsoft.AspNetCore.Components.Web" Version="6.0.10" />
+		<PackageReference Include="Forge.Security.Jwt.Shared" Version="1.6.2" />
+		<PackageReference Include="Microsoft.AspNetCore.Components.Authorization" Version="6.0.13" />
+		<PackageReference Include="Microsoft.AspNetCore.Components.Web" Version="6.0.13" />
 		<PackageReference Include="Microsoft.AspNetCore.WebUtilities" Version="2.2.0" />
 	</ItemGroup>
 

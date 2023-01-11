@@ -50,9 +50,9 @@
 	</ItemGroup>
 
 	<ItemGroup>
-		<PackageReference Include="Forge.Security.Jwt.Client" Version="1.2.4" />
-		<PackageReference Include="Forge.Security.Jwt.Client.Storage.Browser" Version="1.2.4" />
-		<PackageReference Include="Forge.Security.Jwt.Shared" Version="1.6.1" />
+		<PackageReference Include="Forge.Security.Jwt.Client" Version="1.2.6" />
+		<PackageReference Include="Forge.Security.Jwt.Client.Storage.Browser" Version="1.2.5" />
+		<PackageReference Include="Forge.Security.Jwt.Shared" Version="1.6.2" />
 		<ProjectReference Include="..\Forge.Yoda.Shared.Models\Forge.Yoda.Shared.Models.csproj" />
 		<ProjectReference Include="..\Forge.Yoda.Shared.ServiceImpls\Forge.Yoda.Shared.ServiceImpls.csproj" />
 		<ProjectReference Include="..\Forge.Yoda.Shared.ServiceInterfaces\Forge.Yoda.Shared.ServiceInterfaces.csproj" />
@@ -60,8 +60,8 @@
 	</ItemGroup>
 
 	<ItemGroup>
-		<PackageReference Include="System.IdentityModel.Tokens.Jwt" Version="6.25.0" />
-		<PackageReference Include="Microsoft.AspNetCore.Components.Authorization" Version="6.0.10" />
+		<PackageReference Include="System.IdentityModel.Tokens.Jwt" Version="6.25.1" />
+		<PackageReference Include="Microsoft.AspNetCore.Components.Authorization" Version="6.0.13" />
 	</ItemGroup>
 
 	<Target Name="PreBuild" BeforeTargets="PreBuildEvent">
