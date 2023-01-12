@@ -6,7 +6,7 @@
     "devextreme": "^22.1.6",
     "devextreme-react": "^22.1.6",
     "forge-security-jwt-client-web": "1.0.7",
-    "forge-security-jwt-client-web-react": "1.0.3",
+    "forge-security-jwt-client-web-react": "1.0.5",
     "jquery": "^3.6.1",
     "jzo-library": "1.0.6",
     "http-proxy-middleware": "^2.0.6",
