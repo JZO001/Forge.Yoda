@@ -43,7 +43,7 @@ namespace Forge.Yoda.Shared.ServiceImpls
             WeatherForecast[] result = null;
             try
             {
-                result = await _apiCommunicationService.GetAsync<WeatherForecast[]>($"{_options.BaseAddress}{_options.Uri}");
+                result = await _apiCommunicationService.GetAsync<WeatherForecast[]>($"{_options.BaseAddress}{_options.Uri}", CancellationToken.None);
             }
             catch (Exception ex)
             {
