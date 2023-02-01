@@ -13,7 +13,7 @@
 		<PackageReference Include="Forge.Security.Jwt.Client.Storage.Browser" Version="1.2.5" />
 		<PackageReference Include="Forge.Security.Jwt.Shared" Version="1.6.2" />
 		<PackageReference Include="Microsoft.AspNetCore.Components.WebView.WindowsForms" Version="6.0.548" />
-		<PackageReference Include="Microsoft.Extensions.Hosting" Version="6.0.1" />
+		<PackageReference Include="Microsoft.Extensions.Hosting" Version="7.0.0" />
 		<PackageReference Include="log4net" Version="2.0.15" />
 		<PackageReference Include="Microsoft.Extensions.Logging.Log4Net.AspNetCore" Version="6.1.0" />
 	</ItemGroup>
@@ -38,9 +38,9 @@
 		<Reference Include="Forge.Wasm.BrowserStorages">
 		  <HintPath>..\Forge.Yoda.Externals\Forge.Wasm.BrowserStorages.dll</HintPath>
 		</Reference-->
-		<PackageReference Include="System.IdentityModel.Tokens.Jwt" Version="6.25.1" />
+		<PackageReference Include="System.IdentityModel.Tokens.Jwt" Version="6.26.0" />
 		<PackageReference Include="Microsoft.AspNetCore.Components.Authorization" Version="6.0.13" />
-		<PackageReference Include="Microsoft.Extensions.Hosting.Abstractions" Version="6.0.0" />
+		<PackageReference Include="Microsoft.Extensions.Hosting.Abstractions" Version="7.0.0" />
 	</ItemGroup>
 
 	<Target Name="PreBuild" BeforeTargets="PreBuildEvent">

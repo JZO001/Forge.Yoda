@@ -40,9 +40,9 @@
 		<Reference Include="Forge.Wasm.BrowserStorages">
 			<HintPath>..\Forge.Yoda.Externals\Forge.Wasm.BrowserStorages.dll</HintPath>
 		</Reference-->
-		<PackageReference Include="System.IdentityModel.Tokens.Jwt" Version="6.25.1" />
+		<PackageReference Include="System.IdentityModel.Tokens.Jwt" Version="6.26.0" />
 		<PackageReference Include="Microsoft.AspNetCore.Components.Authorization" Version="6.0.13" />
-		<PackageReference Include="Microsoft.Extensions.Hosting.Abstractions" Version="6.0.0" />
+		<PackageReference Include="Microsoft.Extensions.Hosting.Abstractions" Version="7.0.0" />
 	</ItemGroup>
 
 	<ItemGroup>
